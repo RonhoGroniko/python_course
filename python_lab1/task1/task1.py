@@ -21,8 +21,10 @@ def getListOfSmallFiles(directory_path=None):
 
 def copySmallFiles(start_pass, finish_path):
     list_of_files = getListOfSmallFiles(start_pass)
+
     if len(list_of_files) == 0:
         return
+
     else:
         os.makedirs(finish_path, exist_ok=True)
         for filename in list_of_files:

@@ -2,12 +2,15 @@ import os
 
 
 def getListOfChosenFiles(dir_path, needed_files: list = None):
+
     required_files = []
     other_files = []
     number_of_files = 0
     size_sum = 0
+
     if dir_path is None:
         dir_path = "."
+
     if needed_files is not None:
         for filename in os.listdir(dir_path):
             if filename in needed_files:
@@ -24,6 +27,7 @@ def getListOfChosenFiles(dir_path, needed_files: list = None):
                 other.write(name+"\n")
 
         return print("Найденные переданные файлы: ", required_files, "\nОстальные файлы: ", other_files)
+
     else:
         dir_path = "."
         for filename in os.listdir(dir_path):
