@@ -1,0 +1,3 @@
+big.txt
+small2.TXT
+small3.TXT

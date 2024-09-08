@@ -5,7 +5,7 @@ import shutil
 def getListOfSmallFiles(directory_path=None):
         list_of_files = []
         if directory_path is None:
-            directory_path = ".."
+            directory_path = "."
 
         for filename in os.listdir(directory_path):
             filepath = os.path.join(directory_path, filename)
@@ -31,7 +31,7 @@ def copySmallFiles(start_pass, finish_path):
             shutil.copy(start_filepath, finish_filepath)
 
 
-source_path = r"C:\Users\Rodion\PycharmProjects\python_lab1\task1\directory_of_files"
-destination_path = r"C:\Users\Rodion\PycharmProjects\python_lab1\task1\small"
+source_path = r"C:\Users\Rodion\Documents\python_course\python_lab1\task1\directory_of_files"
+destination_path = r"C:\Users\Rodion\Documents\python_course\python_lab1\task1\small"
 
 copySmallFiles(source_path, destination_path)
