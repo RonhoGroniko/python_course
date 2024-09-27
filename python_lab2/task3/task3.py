@@ -20,11 +20,11 @@ img_logo = img_logo.resize(
 img_logo = img_logo.filter(ImageFilter.CONTOUR)
 img_logo = img_logo.point(lambda x: 0 if x == 255 else 255)
 
-
 img_logo = ImageOps.invert(img_logo)
 bbox = img_logo.getbbox()
 img_logo = img_logo.crop(bbox)
 img_logo = ImageOps.invert(img_logo)
+
 
 img.paste(img_logo, (150, 150), img_logo)
 img.show()
